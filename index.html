@@ -1,0 +1,207 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Les Nouveaux Etudiants</title>
+        <meta charset="utf-8">
+		<meta property="og:description" content="Les étudiants acteurs du changement de l'éducation">
+        <meta name="description" content="Les étudiants acteurs du changement de l'éducation">
+        <link rel="Shortcut Icon" type="image/ico" href="img/favicon.png">
+        <link rel="stylesheet" href="css/reset.css" type="text/css" media="screen">
+        <link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
+        <link rel="stylesheet" href="css/queries/netbooks-tablets.css" type="text/css" media="screen and (max-width: 1007px)" />            
+            
+        <script type="text/javascript" src="js/html5.js"></script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>  
+
+		<!--[if lt IE 9]><script type="text/javascript" src="excanvas.js"></script><![endif]-->
+		<script type="text/javascript" src="js/jquery.tagcanvas.min.js" type="text/javascript"></script>	
+            
+        <!--[if IE 7]><link rel="stylesheet" href="css/ie/ie7.css" type="text/css" media="screen"><![endif]-->
+        <!--[if lt IE 7]><link rel="stylesheet" href="css/ie/ie6.css" type="text/css" media="screen"><![endif]-->
+		
+		<!-- script pour récupérer les infos du google moderator -->
+		 <script>
+
+		$.getJSON('./mots_cles.php', function(data) {
+		  var items = [];
+		  var yourNum;
+		  var topicNum;
+		  var seriesNum = 'b740d';
+
+		  $.each(data.data.items, function(key, val) {
+			yourNum = Number(val.id.submissionId);
+			yourNum = yourNum.toString(16);
+			
+			topicNum = Number(val.topics[0].id.topicId);
+			topicNum = topicNum.toString(16);
+			
+			items.push('<li id="' + key + '"><a href="http://www.google.com/moderator/#15/e=' + seriesNum + '&t=' + seriesNum + '.' + topicNum + '&q=' + seriesNum + '.' + yourNum + '">' + val.text + '</a></li>');
+		  });
+
+		  $('<ul/>', {
+			html: items.join('')
+		  }).appendTo($('.nuage'));
+		  
+		  if( ! $('#myCanvas').tagcanvas({
+			 textColour : '#e12617',
+			 outlineThickness : 1,
+			 maxSpeed : 0.01,
+			 depth : 0.75
+		   })) {
+			 // TagCanvas failed to load
+			 $('#myCanvasContainer').hide();
+		   }
+		   // your other jQuery stuff here...
+		});
+		
+		
+		</script>
+		 
+		 <script type="text/javascript">
+
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-21113904-4']);
+		  _gaq.push(['_trackPageview']);
+
+		  (function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+
+		</script>
+ 
+    </head>
+    <body>
+  <div id="wrap">
+
+            <a id="event" href="http://eduhacktion3.eventbrite.com/">Edu'Hack'tion #3</a>
+
+            <header>
+                <div class="inside">
+                    
+						<table>
+						<tr><td>
+							<a href="index.html"><img src="./img/bulb.png" width="150"></a>
+						</td><td>
+							<h1>
+								<a href="index.html">Les Nouveaux Etudiants</a>
+								<small><a href="index.html">Acteurs de l'évolution de l'éducation</a></small>
+							</h1> <!-- This line for @font-face presentational purposes only -->
+						</td></tr>
+						</table>
+                    <nav>
+					 <ul>
+                            <li><a href="http://blog.nouveauxetudiants.fr">Le Blog</a></li>
+							<li><a target="_blank" href="http://www.meetup.com/EduHacktion/">Les Evénements</a></li>
+                            <li><a target="_blank" href="http://twitter.com/#!/NouvelEtudiant">Twitter</a></li>
+                            <li><a target="_blank" href="http://www.facebook.com/NouveauxEtudiants">Facebook</a></li>
+                            <li><a target="_blank" href="http://www.picbadges.com/nouvel-ingenieur/1560081/">Le badge</a></li>
+							<li><a target="_blank" href="http://pear.ly/YBvb">Le Pearltree</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+            <article>
+                <section>
+                    <div class="inside">
+					
+						<!-- Begin MailChimp Signup Form -->
+						<link href="http://cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
+						<style type="text/css">
+							#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
+							/* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+							   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+						</style>
+						<div id="mc_embed_signup">
+						<form action="http://nouveauxetudiants.us2.list-manage1.com/subscribe/post?u=7fac1bfcb16c75f690735dd78&amp;id=1e4f53caf3" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+							
+							<h3><img width=100% src="./img/EduHacktion3.png"></h3>
+							<h2>Par les Nouveaux Etudiants</h2>
+							<p>Nous organisons un troisième événement le samedi 28 janvier 2012 à ESCP Europe à 9h à 12h. Inscrivez-vous sur (<a href="http://eduhacktion3.eventbrite.com/">l'eventbrite</a>).
+							<br />
+							Une journée spéciale en compagnie du professeur Norman Cornett qui vient nous voir du Canada pour vous faire expérimenter ses méthodes d'enseignement innovantes et vous raconter son histoire... 
+							<br />
+							</p>
+							
+							<h3>Trailer</h3>
+							
+							<iframe src="http://player.vimeo.com/video/34750718?title=0&amp;byline=0&amp;portrait=0&amp;autoplay=1" width="550" height="410" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+							
+							<h3>Programme</h3>
+							<p> • 9h : Introduction
+							<br /> • 9h30 : Projection d'un film (<a href='http://see.sc/hambGlnE8'>voir bande annonce</a>)
+							<br /> • 11h : Débat dialogue
+							</p>
+							
+							<p><br /> Il s'inscrit dans une série d'événements à portée nationale sur le thème de l'évolution de l'éducation.
+							<br /> • Hiver : Barcamp Conseil National du Numérique
+							<br /> • Février : TEDx edu (?)
+							<br /> • Avril : Startup Weekend edu (?)
+							<br /> • Juin : Journées apprendre à l’heure du numérique</p>
+
+							<h2>L'enjeu de la démarche :</h2>
+							<p> • Favoriser l'innovation dans l'éducation
+							<br /> • Fédérer une communauté d'étudiants et d'enseignants autour de cet enjeu commun</p>
+							
+							
+							<h2>Précédent Edu'Hack'tion</h2>
+							
+							Voici le débriefing du précédent Edu'Hack'tion :<br /><br />
+							<iframe src="http://player.vimeo.com/video/34722849?title=0&amp;byline=0&amp;portrait=0" width="550" height="310" frameborder="0" webkitAllowFullScreen allowFullScreen></iframe>
+							
+							<h2>Inscrivez-vous à la mailing list</h2>
+							<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+							<div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+							
+						</form>
+						</div>
+
+						<!--End mc_embed_signup-->
+                    </div>
+                </section>  
+            </article>
+            <aside>
+                <div class="inside">
+                    <h2>Visitez le blog !</h2>
+					<a class="eventend" href="http://blog.nouveauxetudiants.fr">Blog Nouveaux Etudiants</a>
+                    <ol>
+                        <li>Blog lancé à l'issue de la journée Edu'Hack'tion du 18 septembre 2011 à l'ESCP</li>
+                    </ol>
+					<h2>Nuage de mots</h2>
+                    <ol>
+						<a class="eventend" target="_blank" href="http://www.google.com/moderator/#15/e=b740d&t=b740d.42">Ajoutez vos mots !</a>
+                        <li>
+							<canvas width="250" height="250" id="myCanvas">
+														<ul class="nuage">
+									</ul>
+							 </canvas>
+						</li>
+                    </ol>
+					<h2>Coorganisé avec</h2>
+                    <ol>
+						<li align=center><br /><a target="_blank" href="http://www.elab.fr/site/"><img src="./img/elabetter.png" width=200></a></li>
+                        <li align=center><br /><a target="_blank" href="http://we.makesense.org"><img src="./img/makesensebetter.png" width=200></a></li>
+						<li align=center><a target="_blank" href="http://nouvelingenieur.fr"><img src="./img/logoNIbetter.png" width=240></a></li>
+						<li align=center><br /><a target="_blank" href="https://www.facebook.com/pages/Noise-ESCP-Europe/214333031926782?sk=wall"><img src="./img/noisebetter.png" width=200></a></li>
+						<li align=center><br /><a target="_blank" href="http://learnitlab.wordpress.com/"><img src="./img/learnit.png" height=200></a></li>
+						<li align=center><br /><a target="_blank" href="http://missionrefresh.fr/"><img src="./img/refreshbetter.png" height=200></a></li>
+                    </ol>
+					
+                </div>
+            </aside>
+        </div>
+        <footer>
+            <div class="inside">
+                <h2>Etudiants, regroupons-nous pour faire évoluer l'éducation !</h2>
+                <p>Collaborons avec l'enseignement supérieur pour devenir acteurs de nos formations et pour faire évoluer les pédagogies.</p>
+				<ul>
+					<li>Les Nouveaux Etudiants à Sciences Po : <a href=http://sciencespo.nouveauxetudiants.fr style="color: #ffffff">sciencespo.nouveauxetudiants.fr</a></li>
+					<li>Les Nouveaux Etudiants en école de commerce : <a href=http://manager.nouveauxetudiants.fr style="color: #ffffff">manager.nouveauxetudiants.fr</a></li>
+					<li>Les Nouveaux Etudiants en école d'ingénieurs : <a href=http://ingenieur.nouveauxetudiants.fr style="color: #ffffff">ingenieur.nouveauxetudiants.fr</a></li>
+				</ul>
+            </div>
+        </footer>        
+        <script type="text/javascript" src="js/custom.js"></script>
+    </body>
+</html>
