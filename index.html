@@ -54,7 +54,27 @@
 		   // your other jQuery stuff here...
 		});
 		
-		
+		$.getJSON('./livrables.php', function(data) {
+		  var items = [];
+		  var yourNum;
+		  var topicNum;
+		  var seriesNum = 'b740d';
+
+		  $.each(data.data.items, function(key, val) {
+			yourNum = Number(val.id.submissionId);
+			yourNum = yourNum.toString(16);
+			
+			topicNum = Number(val.topics[0].id.topicId);
+			topicNum = topicNum.toString(16);
+			
+			items.push('<li id="' + key + '"><a href="http://www.google.com/moderator/#15/e=' + seriesNum + '&t=' + seriesNum + '.' + topicNum + '&q=' + seriesNum + '.' + yourNum + '">' + val.text + '</a></li>');
+		  });
+
+		  $('<ul/>', {
+			html: items.join('')
+		  }).appendTo($('.livrables'));
+		  
+		});
 		</script>
 		 
 		 <script type="text/javascript">
@@ -143,12 +163,8 @@
 							<br /> • 14h : Regroupés en petite équipes mixtes de 10, on participera à des ateliers de fabrication pour réaliser les idées de classes proposées.
 							<br />Chaque groupe disposera d’une salle et de matériel.
 							<br />Liste des livrables à produire (pour une session de 30 minutes) :
-							<br />- 1e livrable, le logo de la classe
-							<br />- 2e livrable, une raison d’apprendre ce qu’enseigne la classe
-							<br />- 3e livrable, le lieu et/ou l’itinéraire de la classe
-							<br />- 4e livrable, une méthode pour évaluer l’apprentissage
-							<br />- 5e livrable, le plan de la classe en 3 tweets
-							<br />- 6e livrable, une publicité vidéo de 1 minute pour la classe
+								<ul class="livrables">
+								</ul>
 							<br /> • 16h : Chaque groupe donne sa classe de 30 min à un autre groupe.
 							<br /> • 16h30 : Feeback et on inverse les groupes
 							<br /> • 17h10 : Derniers feedbacks
